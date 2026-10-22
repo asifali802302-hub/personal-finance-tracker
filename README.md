@@ -4,6 +4,14 @@ A full-stack, responsive Personal Finance Tracker built with **React**, **Tailwi
 
 ---
 
+## 🔗 Live Deployment & Links
+
+* 🌐 **Live Web Application (Vercel):** [Deployed on Vercel](https://vercel.com/asifali802302-hub/personal-finance-tracker)
+* ⚙️ **Live Backend REST API (Render):** [`https://personal-finance-api-figp.onrender.com`](https://personal-finance-api-figp.onrender.com)
+* 📦 **GitHub Repository:** [`https://github.com/asifali802302-hub/personal-finance-tracker`](https://github.com/asifali802302-hub/personal-finance-tracker)
+
+---
+
 ## 🌟 Key Features
 
 * **🔐 Secure JWT Authentication:** User registration and login with encrypted passwords (BCrypt) and stateless JWT token authorization.
@@ -29,7 +37,7 @@ A full-stack, responsive Personal Finance Tracker built with **React**, **Tailwi
 | **Backend** | Spring Boot 3.3 (Java 21/25) | RESTful APIs & MVC architecture |
 | **Security** | Spring Security 6 + JJWT | Bearer token authentication & authorization |
 | **Database** | MongoDB Atlas (Cloud) | Scalable NoSQL document database |
-| **Notifications** | React Hot Toast | Real-time user feedback and alerts |
+| **Deployment** | Vercel (Client) + Render (Server) | Zero-downtime automated cloud deployments |
 
 ---
 
@@ -46,6 +54,7 @@ personal-finance-tracker/
 │   │   ├── App.jsx             # Root routing and state provider
 │   │   └── main.jsx
 │   ├── package.json
+│   ├── vercel.json             # SPA routing rewrite for Vercel
 │   └── vite.config.js
 │
 └── server/                     # Spring Boot Backend
@@ -59,6 +68,7 @@ personal-finance-tracker/
     │   └── PersonalFinanceApplication.java
     ├── src/main/resources/
     │   └── application.properties # MongoDB Atlas URI & JWT secrets
+    ├── Dockerfile              # Docker production image build
     └── pom.xml
 ```
 
@@ -103,7 +113,7 @@ personal-finance-tracker/
    cd client
    ```
 
-2. Install dependencies (if not already installed):
+2. Install dependencies:
    ```bash
    npm install
    ```
@@ -128,21 +138,3 @@ personal-finance-tracker/
 * `POST /api/transactions` - Create a transaction (`title`, `amount`, `type`, `category`, `date`, `notes`).
 * `DELETE /api/transactions/{id}` - Delete a transaction by ID.
 * `GET /api/transactions/summary` - Aggregate total income, total expense, net balance, category breakdown, and monthly cash flow.
-
----
-
-## 🌐 Deployment Instructions
-
-### Frontend (Vercel)
-1. Push the project to GitHub.
-2. Link your repository in [Vercel](https://vercel.com).
-3. Set the **Root Directory** to `client`.
-4. Add environment variable `VITE_API_URL` pointing to your deployed backend URL.
-5. Click **Deploy**!
-
-### Backend (Render or Railway)
-1. In [Render](https://render.com) or [Railway](https://railway.app), create a new **Web Service**.
-2. Connect your repository and select the `server` root directory.
-3. Build Command: `mvn clean package -DskipTests`
-4. Start Command: `java -jar target/personal-finance-server-0.0.1-SNAPSHOT.jar`
-5. Set environment variables for `SPRING_DATA_MONGODB_URI` and `JWT_SECRET`.
