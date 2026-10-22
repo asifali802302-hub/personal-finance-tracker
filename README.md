@@ -6,7 +6,7 @@ A full-stack, responsive Personal Finance Tracker built with **React**, **Tailwi
 
 ## 🔗 Live Deployment & Links
 
-* 🌐 **Live Web Application (Vercel):** [Deployed on Vercel](https://vercel.com/asifali802302-hub/personal-finance-tracker)
+* 🌐 **Live Web Application (Vercel):** [https://personal-finance-tracker-pi-plum.vercel.app](https://personal-finance-tracker-pi-plum.vercel.app)
 * ⚙️ **Live Backend REST API (Render):** [`https://personal-finance-api-figp.onrender.com`](https://personal-finance-api-figp.onrender.com)
 * 📦 **GitHub Repository:** [`https://github.com/asifali802302-hub/personal-finance-tracker`](https://github.com/asifali802302-hub/personal-finance-tracker)
 
